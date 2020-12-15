@@ -1,0 +1,82 @@
+{% extends 'moderntools_proj/base.html' %}
+{% load static %}
+
+{% block title %}
+
+ModernTools | PDF Editor | Contact Us
+
+{% endblock title %}
+
+{% block content %}
+
+<main>
+
+    {% include 'includes/header.html' %}
+
+
+    <!-- Contact Form -->
+
+    <section class=" bg-alpha text-alpha pb-4 text-alpha fade-in">
+        {% include 'moderntools_proj/messages.html' %}
+        <div class="container p-4">
+            <div class="row pt-4 justify-content-evenly">
+                <div class="col-10 align-self-center bg-alpha-light cus-form-card my-4 p-5">
+
+                    {% if user.is_authenticated %}
+
+                    <form class="row g-3" method="POST" action="{% url 'contacts:contact' %}">
+                        {% csrf_token %}
+
+                        <div class="col-12">
+                            <label for="inputquery" class="form-label">Please enter your query</label>
+                            <textarea name="query" class="form-control" name="" id="inputquery" cols="30"
+                                rows="10"></textarea>
+                        </div>
+
+                        <div class="col-12">
+                            <input class="btn btn-primary btn-lg btn-alpha" type="submit" value="Submit">
+                        </div>
+                    </form>
+
+                    {% else %}
+
+                    <form class="row g-3" method="POST" action="{% url 'contacts:contact' %}">
+                        {% csrf_token %}
+
+                        <div class="col-md-6">
+                            <label for="inputfname" class="form-label">First Name</label>
+                            <input name="firstname" type="text" class="form-control" id="inputfname">
+                        </div>
+                        <div class="col-md-6">
+                            <label for="inputlname" class="form-label">Last Name</label>
+                            <input name="lastname" type="text" class="form-control" id="inputlname">
+                        </div>
+                        <div class="col-md-12">
+                            <label for="inputemail" class="form-label">Email Address</label>
+                            <input name="email" type="email" class="form-control" id="inputemail">
+                        </div>
+                        <div class="col-12">
+                            <label for="inputquery" class="form-label">Query</label>
+                            <textarea name="query" class="form-control" name="" id="inputquery" cols="30"
+                                rows="10"></textarea>
+                        </div>
+
+                        <div class="col-12">
+                            <input class="btn btn-primary btn-lg btn-alpha" type="submit" value="Submit">
+                        </div>
+                    </form>
+
+
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+</main>
+
+{% endblock content %}

@@ -1,0 +1,40 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+
+<head>
+    {% include 'includes/head.html' %}
+    <title> {% block title %} {% endblock title %}</title>
+</head>
+
+
+{% include 'includes/head.html' %}
+
+<body>
+    <!-- Navbar -->
+    {% include 'includes/navbar.html' %}
+
+
+
+    <!-- Main Content -->
+    {% block content %}
+
+
+    {% endblock content %}
+
+
+
+    <!-- Footer  -->
+    {% include 'includes/footer.html' %}
+
+
+
+
+    <!-- Scripts -->
+
+    {% include 'includes/scripts.html' %}
+
+
+</body>
+
+</html>

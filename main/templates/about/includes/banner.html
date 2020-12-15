@@ -1,0 +1,23 @@
+{% load static %}
+
+<!-- Banner, Ref. Name: About Us - Section 1-->
+
+{% for section in sections %}
+
+{% if section.reference_name == 'About Us - Section 1' %}
+
+<section class=" bg-beta-light text-alpha pb-md-4 fade-in first-section">
+    <div class="container pt-4">
+        <div class="row p-4">
+            <div class="col-md-6 col-12 align-self-center banner-head">
+
+                <h3 class="font-alpha">{{section.description_text}}</h3>
+            </div>
+            <div class="col-md-6 col-12 banner"><img src="{% static 'images/aboutUs.jpg' %}" alt=""></div>
+        </div>
+    </div>
+</section>
+
+{% endif %}
+
+{% endfor %}

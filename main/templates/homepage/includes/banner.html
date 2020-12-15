@@ -1,0 +1,28 @@
+{% load static %}
+
+<!-- Banner, Reference Name: Home Page - Section 1 -->
+
+{% for section in sections %}
+
+{% if section.reference_name == "Home Page - Section 1" %}
+
+<section class=" bg-beta-light text-alpha pb-md-4 fade-in first-section">
+    <div class="container pt-4">
+        <div class="row p-4">
+            <div class="col-md-6 col-12 align-self-center banner-head">
+
+                <h3 class="font-alpha">{{section.description_text}}</h3>
+
+                <a class="btn btn-primary btn-alpha my-4 fs-5" href="">
+                    <i class="far fa-arrow-alt-circle-down me-2"></i>Download
+                </a>
+
+            </div>
+            <div class="col-md-6 col-12 banner"><img src="{{section.banner_image.url}}" alt=""></div>
+        </div>
+    </div>
+</section>
+
+{% endif %}
+
+{% endfor %}

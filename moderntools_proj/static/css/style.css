@@ -1,0 +1,231 @@
+/* Customizing Navbar  */
+
+/* Custom Link colors  */
+
+.nav-cus-menu .navbar-nav .nav-link{
+    color: var(--alpha-light-color);
+    position: relative;
+}
+
+/* Navbar animation */
+
+.nav-text-change .nav-cus-menu .navbar-nav .nav-link{
+    color: var(--alpha-color);
+    
+}
+
+.nav-text-change {
+    color: var(--alpha-color);
+}
+nav.bg-beta-light{
+    opacity:0.9;
+    transition: 2s ease;
+}
+
+nav.bg-alpha{
+    transition: 2s ease;
+}
+
+/* Navbar animation ends */
+
+/* Links and hover  */
+
+.nav-cus-menu .navbar-nav .nav-link::after{
+    content: '';    
+    position: absolute;
+    width: 100%;
+    height: 0.175rem;
+    background-color: var(--beta-color);
+    left:0;
+    bottom:0;
+    transform: scale(0,1);
+    transition: transform 0.4s ease-in;
+}
+
+.nav-cus-menu .navbar-nav .nav-link:hover::after{
+    transform: scale(1,1);
+}
+
+/* Nav active links should have bottom border */
+.nav-cus-menu .navbar-nav .nav-item .active::after {
+    color: var( --beta-color);
+    transform: scale(1,1);
+}
+
+/* Aligining Nav elements */
+
+.nav-cus-menu{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.nav-cus-menu ul li{
+    padding: 0 1.3rem;
+}
+
+
+/* Main > Banner */
+
+.banner img{
+    width:100%;
+
+}
+/* Main > stats */
+.stats-head{
+    letter-spacing: 3px;
+}
+
+/* Main > Cards */
+
+.cus-card p{
+    padding: 3rem;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+}
+.cus-card a{
+    margin: 3rem 0 4rem 0;  
+}
+.cus-card i{
+    font-size: 10rem;
+}
+
+.cus-card{
+    min-height: 600px;
+    height:100%;
+    width: 400px;
+    box-shadow: 13px 13px 33px -17px rgba(0,0,0,0.62);
+-webkit-box-shadow: 13px 13px 33px -17px rgba(0,0,0,0.62);
+-moz-box-shadow: 13px 13px 33px -17px rgba(0,0,0,0.62);
+    border-radius: 8px;
+    display: grid;
+    grid-template-rows: 60% 20% 20%;
+    justify-items: center;
+    align-items: center;
+    transform: scale(1);
+    transition: all 0.5s ease-out;
+}
+
+.cus-card:hover{
+    transform: scale(0.995);
+}
+
+/* Download page */
+
+/* Main > browsers section */
+
+.browser-images img{
+    width: 100%;
+}
+
+
+/* Contact Page */
+
+/* Form containter */
+
+.cus-form-card{
+    box-shadow: 13px 13px 33px -17px rgba(0,0,0,0.62);
+    -webkit-box-shadow: 13px 13px 33px -17px rgba(0,0,0,0.62);
+    -moz-box-shadow: 13px 13px 33px -17px rgba(0,0,0,0.62);
+    border-radius: 8px;
+    transform: scale(1);
+    transition: transform 0.5s ease-in-out;
+}
+
+.cus-form-card:hover{
+    transform: scale(0.995);
+}
+
+.form-control:focus{
+    border: var(--gamma-color) 0.2px solid;  
+    box-shadow: 0px 0px 0.1px 0.5px  rgba(239, 35, 60, 1) inset, 0px 0px 5px 3.5px rgba(239, 35, 60, 0.2);
+    transition: 1s ease-in-out;
+
+    /* box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.075) inset, 0px 0px 8px rgba(255, 100, 255, 0.5); */
+}
+
+
+/* Footer */
+
+.logo{
+    width:50%;
+}
+
+.footer-icons i {
+    padding:0 1.5rem;
+}
+
+.footer-links a{
+    transition: all 0.5s ease;
+}
+
+.footer-links a:hover {
+    color: var(--beta-color);
+}
+
+.footer-border{
+    border-left: 1px solid var(--alpha-light-color);
+   
+}
+
+/* Animations */
+
+/* .fade-in .row {
+    animation: fadeIn 1.5s ease;
+} */
+
+/* The above animation is being controlled using intersect observer API */
+
+
+/* Navbar animation */
+
+
+
+
+/* Media Queries */
+
+@media (max-width:768px){
+
+    /* Navbar */
+   .navbar-toggler{
+       margin-top: 1.5rem;
+       margin-left: 0.5rem;
+   }
+
+   .nav-cus-menu{
+       display: block;
+   }
+
+   .nav-cus-menu ul{
+    width: 50%;
+    }
+
+    .nav-cus-menu ul li a{
+        width: 80%;
+    }
+
+    /* Banner */
+
+    .banner-head {
+        display:grid;
+        grid-template-rows: 1fr 1fr;
+        justify-items: center;
+        align-items: center;
+    }
+
+  .footer-links-section{
+      padding: 1rem;
+      text-align: center;
+  }
+
+  .footer-border{
+    border-top: 1px solid var(--alpha-light-color);
+    border-left:none!important;
+    padding: 0 3rem;
+  }
+  
+}
+
+
+
+

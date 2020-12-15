@@ -1,0 +1,27 @@
+{% extends 'moderntools_proj/base.html' %}
+
+{% load static %}
+
+{% block title %}
+
+ModernTools | PDF Editor | About Us
+
+{% endblock title %}
+
+{% block content %}
+<main>
+    <!-- Banner -->
+    {% include 'about/includes/banner.html' %}
+
+    <!-- Mission -->
+    {% include 'about/includes/our_mission.html' %}
+
+    <!-- Culture -->
+    {% include 'about/includes/our_culture.html' %}
+
+    <!-- Cards to submit query and download trial -->
+
+    {% include 'about/includes/about_cards.html' %}
+
+</main>
+{% endblock content %}

@@ -1,0 +1,31 @@
+{% extends 'moderntools_proj/base.html' %}
+{% load static %}
+
+{% block title %}
+
+ModernTools | PDF Editor | Home
+
+{% endblock title %}
+
+{% block content %}
+
+<main>
+
+    <!-- includes directory is in app directory -->
+
+    <!-- Banner -->
+    {% include 'homepage/includes/banner.html' %}
+
+    <!-- Features -->
+    {% include 'homepage/includes/features.html' %}
+
+    <!-- Stats -->
+    {% include 'homepage/includes/stats.html' %}
+
+    <!-- Cards to submit query and download trial -->
+
+    {% include 'homepage/includes/home_cards.html' %}
+
+</main>
+
+{% endblock content %}

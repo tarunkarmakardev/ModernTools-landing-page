@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Catamaran:wght@600&family=JetBrains+Mono&display=swap');
+
+/* CSS reset  */
+
+* {
+    font-family: 'Catamaran', sans-serif;
+    /* font-family: 'JetBrains Mono', monospace; */
+}
+
+
+:root{
+
+    /* We have three dark/vibrant colors and two light colors, hence the naming alpha, beta, gamma */
+
+    --alpha-color: #2B2D42;
+    --beta-color: #D90429;
+    --gamma-color: #EF233C;
+    --alpha-light-color: #EDF2F4;
+    --beta-light-color: #8D99AE;
+    
+}
+
+/* Background colors */
+
+.bg-alpha{
+    background-color: var(--alpha-color);
+}
+.bg-beta{
+    background-color: var(--beta-color);
+}
+.bg-gamma{
+    background-color: var(--gamma-color);
+}
+.bg-alpha-light{
+    background-color: var(--alpha-light-color);
+}
+.bg-beta-light{
+    background-color: var(--beta-light-color);
+}
+
+/* Text colors */
+
+.text-alpha{
+    color: var(--alpha-color);
+}
+.text-beta{
+    color: var(--beta-color);
+}
+.text-gamma{
+    color: var(--gamma-color);
+}
+.text-alpha-light{
+    color: var(--alpha-light-color);
+}
+.text-beta-light{
+    color: var(--beta-light-color);
+}
+
+/* Fonts */
+.font-alpha{
+    font-family: 'JetBrains Mono', monospace;
+}
+
+/* Buttons ----------------*/
+
+.btn-alpha{
+    background-color: var(--alpha-color);
+    border: var(--alpha-color) 0.1rem solid;
+    color: var(--alpha-light-color);
+    box-shadow: 5px 5px 23px -13px rgba(0,0,0,0.75);
+-webkit-box-shadow: 5px 5px 23px -13px rgba(0,0,0,0.75);
+-moz-box-shadow: 5px 5px 23px -13px rgba(0,0,0,0.75);
+    transition: all 1s ease;
+}
+
+.btn-alpha:hover{
+    background-color: var(--alpha-color);
+    border: var(--alpha-color) 0.1rem solid;
+    color: var(--alpha-light-color);
+    opacity: 0.95;
+    transform: scale(0.95);
+}
+
+/* ---- */
+
+.btn-beta{
+    background-color: var(--beta-color);
+    border: var(--beta-color) 0.1rem solid;
+    color: var(--alpha-light-color);
+    box-shadow: 5px 5px 23px -13px rgba(0,0,0,0.75);
+-webkit-box-shadow: 5px 5px 23px -13px rgba(0,0,0,0.75);
+-moz-box-shadow: 5px 5px 23px -13px rgba(0,0,0,0.75);
+    transition: all 1s ease;
+}
+
+.btn-beta:hover{
+    background-color: var(--beta-color);
+    border: var(--beta-color) 0.1rem solid;
+    color: var(--alpha-light-color);
+    opacity: 0.95;
+    transform: scale(0.95);
+}
+
+/* ---- */
+
+.btn-gamma{
+    background-color: var(--gamma-color);
+    border: var(--gamma-color) 0.1rem solid;
+    color: var(--alpha-light-color);
+    box-shadow: 5px 5px 23px -13px rgba(0,0,0,0.75);
+-webkit-box-shadow: 5px 5px 23px -13px rgba(0,0,0,0.75);
+-moz-box-shadow: 5px 5px 23px -13px rgba(0,0,0,0.75);
+    transition: all 1s ease;
+}
+
+.btn-gamma:hover{
+    background-color: var(--gamma-color);
+    border: var(--gamma-color) 0.1rem solid;
+        color: var(--alpha-light-color);
+    opacity: 0.95;
+    transform: scale(0.95);
+}
+
+/* Buttons End---------------*/
+
+
+/* Font Sizes------------- */
+
+.fs-cus-1{
+    font-size: 4rem;
+}
+
+.fs-cus-2{
+    font-size: 3rem;
+}

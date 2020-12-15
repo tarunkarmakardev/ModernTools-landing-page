@@ -1,0 +1,71 @@
+<!-- Footer  -->
+{% load static %}
+
+<footer>
+
+    <div class="container-fluid bg-alpha text-alpha-light">
+
+        <!-- Footer's main section  -->
+        <div class="row p-4">
+
+            <!-- Logo and Brand Name  -->
+            <div class="col-md-4 col-12">
+
+                <div class="row justify-content-center">
+                    <div class="col-6 text-center py-2"><img src="{% static 'images/logo.png' %}" class="logo px-2"
+                            alt=""></div>
+                </div>
+
+                <div class="row justify-content-center">
+                    <div class="col-6 text-center py-2 fs-4">MordernTools</div>
+                </div>
+
+            </div>
+
+            <!-- Social links and sitemap -->
+
+            <div class="col-md-8 col-12 footer-links-section">
+                <div class="row h-100 justify-content-center align-items-center">
+                    <!-- Sitemap Links -->
+                    <div class="col-lg-4 col-10 footer-border">
+
+                        <ul class="nav flex-column footer-links my-4 p-2">
+                            <li class="nav-item">
+                                <a href="{% url 'contacts:contact' %}" class="nav-link text-alpha-light">Contact Us</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="{% url 'main:about' %}" class="nav-link text-alpha-light">About Us</a>
+                            </li>
+                        </ul>
+
+
+                    </div>
+                    <!-- Social Links -->
+                    <div class="col-lg-4 col-10 bg-alpha fs-2 text-center footer-links footer-border p-2 new-tab">
+                        <h2 class="fs-5 my-4">Our Social links</h2>
+                        <div class="d-flex justify-content-center footer-icons mt-3 ms-md-4">
+                            <a class="text-alpha-light" href="https://www.facebook.com/"><i
+                                    class="fab fa-facebook"></i></a>
+                            <a class="text-alpha-light" href="https://www.twitter.com/"><i
+                                    class="fab fa-twitter-square"></i></a>
+                            <a class="text-alpha-light" href="https://www.instagram.com/"><i
+                                    class="fab fa-instagram"></i></a>
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- CopyRight text -->
+        <div class="row border-top py-2 mt-2">
+            <div class="col-12 py-4 text-center fs-4">
+                &copy; 2020 MordernTools
+            </div>
+        </div>
+
+    </div>
+
+</footer>

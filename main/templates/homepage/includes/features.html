@@ -1,0 +1,52 @@
+{% load static %}
+
+<!-- Features, Ref. Name: 'Home Page - Section 2' -->
+
+{% for section in sections %}
+
+{% if section.reference_name == "Home Page - Section 2" %}
+
+<section class=" bg-beta p-4 fade-in">
+    <div class="container pt-4">
+
+        <!-- Heading  -->
+        <div class="row pt-4 justify-content-evenly">
+            <div class="col-md-6 col-8 align-self-center">
+
+                <h3 class="font-alpha text-center">
+                    {{section.heading_text}}
+                </h3>
+
+            </div>
+        </div>
+
+        <!-- Feature Icons  -->
+        <div class="row pt-4 mt-4 justify-content-evenly fs-cus-1">
+
+            {% for feature in section.feature_list.all %}
+            <div class="col-md-2 col-5 align-self-center text-center my-3">
+                {{feature.feature_icon_html | safe}}
+                <h5 class="font-alpha">
+                    {{feature.features_name}}
+                </h5>
+            </div>
+
+            {% endfor %}
+        </div>
+
+        <!-- Button  -->
+        <div class="row pt-4 mt-4 mb-4 justify-content-evenly">
+
+            <div class="col-md-5 col-10 align-self-center fs-2 text-center">
+                <a class="btn btn-primary btn-lg btn-alpha my-4" href="">
+                    <i class="fab fa-leanpub me-2"></i>{{section.button_text}}
+                </a>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+{% endif %}
+
+{% endfor %}

@@ -1,0 +1,40 @@
+{% load static %}
+
+<!-- Stats Ref. Name: 'Home Page - Section 3-->
+
+{% for section in sections %}
+
+{% if section.reference_name == "Home Page - Section 3" %}
+
+<section class=" bg-alpha text-alpha-light p-4 fade-in">
+    <div class="container pt-4">
+
+        <!-- Heading  -->
+        <div class="row pt-4 justify-content-evenly stats-head">
+            <div class="col-md-6 col-8 align-self-center">
+
+                <h3 class="font-alpha text-center">
+                    {{section.heading_text}}
+                </h3>
+
+            </div>
+        </div>
+
+        <!-- stats details  -->
+        <div class="row pt-4 mt-4 mb-4 justify-content-evenly">
+            {% for stat in section.Stat_list.all %}
+            <div class="col-md-3 col-10 align-self-center text-center my-3">
+                <h1 class="font-alpha text-beta fs-cus-1">{{stat.stat_header_text}}</h1>
+                <h5 class="font-alpha text-uppercase">
+                    {{stat.stat_des_text}}
+                </h5>
+            </div>
+            {% endfor %}
+        </div>
+
+    </div>
+</section>
+
+{% endif %}
+
+{% endfor %}

@@ -1,0 +1,35 @@
+{% load static %}
+
+<!-- About Us - Section 4 -->
+
+{% for section in sections %}
+
+{% if section.reference_name == 'About Us - Section 4' %}
+
+
+<section class=" bg-gamma pb-4 text-alpha fade-in">
+    <div class="container p-4">
+        <div class="row pt-4 justify-content-evenly">
+
+            {% for card in section.card_list.all %}
+
+            <div class="col-4 align-self-center bg-alpha-light cus-card my-4">
+                <i class="fas fa-download"></i>
+
+                <p>{{card.card_des_text}}</p>
+
+                <a href="{{card.button_target_page.page_permalink}}"
+                    class="btn btn-primary btn-lg btn-alpha">{{card.card_button_text}}</a>
+
+            </div>
+
+            {% endfor %}
+
+
+
+        </div>
+    </div>
+</section>
+
+{% endif %}
+{% endfor %}

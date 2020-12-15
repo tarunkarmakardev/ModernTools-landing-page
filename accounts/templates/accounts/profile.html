@@ -1,0 +1,52 @@
+{% extends 'moderntools_proj/base.html' %}
+{% load static %}
+
+{% block title %}
+
+ModernTools | PDF Editor | Profile
+
+{% endblock title %}
+
+{% block content %}
+
+<main>
+    <!-- profile header-->
+
+
+    <section class=" bg-beta-light text-alpha pb-md-4 fade-in first-section">
+        <div class="container pt-4">
+            <div class="row p-4">
+                <div class="col-md-12 col-12 align-self-center banner-head text-center">
+                    <h3 class="font-alpha">Hello, {{user.first_name | title }}!</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- Profile body  -->
+    <section class=" bg-beta text-alpha p-4 fade-in">
+        <div class="container pt-4">
+            <div class="row pt-4 justify-content-evenly">
+                <div class="col-md-6 col-8 align-self-center text-center">
+
+                    <h3 class="font-alpha text-center">
+                        Thank you for registering with us! Download the ModernTools PDF editor now!
+                    </h3>
+
+                    <a class="btn btn-primary btn-alpha my-4 fs-5 " href="{% url 'main:download' %}">
+                        <i class="far fa-arrow-alt-circle-down me-2"></i>Download
+                    </a>
+
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+
+
+</main>
+
+{% endblock content %}

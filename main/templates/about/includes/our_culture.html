@@ -1,0 +1,35 @@
+{% load static %}
+
+<!-- About Us - Section 3 -->
+
+{% for section in sections %}
+
+{% if section.reference_name == 'About Us - Section 3' %}
+
+<section class=" bg-alpha text-alpha-light p-4 fade-in">
+    <div class="container pt-4">
+
+        <!-- Heading  -->
+        <div class="row pt-4 justify-content-evenly">
+            <div class="col-md-6 col-8 align-self-center">
+
+                <h3 class="font-alpha text-center">
+                    {{section.heading_text}}
+                </h3>
+
+            </div>
+        </div>
+
+        <div class="row pt-4 mt-4 justify-content-evenly">
+
+            <div class="col-md-8 col-5 align-self-center text-center fs-3 my-3">
+                <p>{{section.description_text}}</p>
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+{% endif %}
+{% endfor %}
