@@ -33,9 +33,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = '%b$0==+p=#m@yt2*t)f45!$6@me=h13(8rs7xqrh54fk#+rf3('
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['moderntools.herokuapp.com', 'localhost']
 
 
 # Application definition
